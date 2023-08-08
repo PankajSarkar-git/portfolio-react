@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./componentStyle.css";
 import { Menu , X} from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileNav , setMobileNav] = useState(false);
-
+  const navLinks = document.querySelectorAll('.nav-links').forEach((e)=>{
+    e.addEventListener('click',()=>setMobileNav(false))
+  })
 
   const toggleMenu = () => {
     setMobileNav(!mobileNav);
@@ -14,9 +16,11 @@ const Navbar = () => {
   return (
     <>
     {/* ================navBar================ */}
-      <nav className="navbar">
+      <nav className="navbar top-nav">
       {/* ==================name================== */}
+      <div className="nav-titel">
         <h2>Pankaj Sarkar</h2>
+      </div>
         {/*============= nav Link=============  */}
         <ul className= {mobileNav ? "unOderList activeNav " : "unOderList"} >
           <li className="nav-links">

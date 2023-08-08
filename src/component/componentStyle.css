@@ -26,64 +26,61 @@ h4 {
 
 :root {
     --main-textgreen-color: #16f087;
-    --About-bg-color:rgba(0, 0, 0, 0.6);
+    --About-bg-color: rgba(0, 0, 0, 0.6);
 }
 
 
 /*------------------------------------------- navbar style-------------------------------------------  */
-
-
 .navbar {
-    padding: 0rem 10rem;
+    padding: 0rem 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: transparent;
     color: white;
     letter-spacing: 2px;
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
-    position: relative;
+    position: fixed;
     transition: transform 0.5s;
+    background-color: #03033f;
+    width: 100%;
 }
 
 .navbar>.unOderList {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
     transition: transform 0.5s;
+    
 }
 
 .navbar>.unOderList>.nav-links {
     list-style: none;
-
 }
 
 .navbar>.unOderList>.nav-links a {
     position: relative;
     margin-left: 3rem;
     font-size: 1.5rem;
-    padding: 2px 0;
+    padding: 1rem 0;
     color: white;
     text-decoration: none;
 }
-
 .navbar>.unOderList>.nav-links a:hover,
 .navbar>.unOderList>.nav-links a:active {
-    color: red;
+    color: #16f087;
 }
 
 .navbar>.unOderList>.nav-links a::after {
     content: "";
     position: absolute;
-    background-color: red;
+    background-color: #16f087;
     height: 3px;
     width: 0;
     left: 0;
-    bottom: -10px;
+    bottom: 0;
     transition: .3s;
 }
 
@@ -112,6 +109,7 @@ h4 {
 @media (max-width:891px) {
     .navbar {
         font-size: 1.8rem;
+
     }
 
     .navbar>.unOderList>.nav-links a {
@@ -122,6 +120,7 @@ h4 {
 @media (max-width:966px) {
     .navbar {
         font-size: 1.8rem;
+        height: 7vh;
     }
 
     .navbar>.unOderList>.nav-links a {
@@ -135,54 +134,48 @@ h4 {
     }
 
     .navbar>.unOderList {
-        position: absolute;
+        position: fixed;
         top: 7vh;
         display: flex;
         transform: translateX(180%);
         /* right: 0; */
         flex-direction: column;
-        background: linear-gradient(rgba(1, 1, 50, 0.8), black);
+        background: rgba(1, 1, 50, 0.8);
         height: 93vh;
         width: 60vw;
         justify-content: space-around;
         transition: transform 0.5s;
+        z-index: 9999;
 
     }
 
     .navbar>.activeNav {
-        position: absolute;
+        border: 1px solid #16f087;
+        padding: 3rem;
+        position: fixed;
         top: 7vh;
         display: flex;
         transform: translateX(0);
-        right: 0;
+        right: 10px;
         flex-direction: column;
-        background: linear-gradient(rgba(1, 1, 57, 0.8), black);
+        background: rgba(1, 1, 50, 0.8);
         height: 93vh;
-        width: 60vw;
-        justify-content: space-around;
+        width: 97vw;
+        justify-content: flex-start;
+        gap: 5rem;
         transition: transform 0.5s;
+        z-index: 99999;
     }
 
     .navbar>.unOderList>.nav-links a::after {
-        content: "";
-        position: absolute;
-        background-color: red;
-        height: 3px;
-        width: 0%;
-        left: 0;
-        bottom: -10px;
-        transition: .3s;
-        justify-content: space-around;
-        display: flex;
+        display: none;
     }
 
     .navbar>.unOderList>.nav-links a {
-        position: relative;
-        margin-left: 0;
+        position: absolute;
+        left:0;
         font-size: 1.5rem;
-        padding: 0;
-        color: white;
-        text-decoration: none;
+        width: 100%;
     }
 
 
@@ -196,20 +189,16 @@ h4 {
 
 }
 
-@media (max-width:525px) {
-    .navbar {
-        padding: 0 5rem;
-    }
-}
+
 
 /*-------------------------------------------------- home section-------------------------------------------------- */
 .section {
-    padding: 0 10rem;
+    padding: 10vh 5vw;
 }
 
 
 .home {
-    height: 90vh;
+    height: 80vh;
     /* width: 100vw; */
     display: flex;
     gap: 5rem;
@@ -255,7 +244,7 @@ h4 {
     padding: 0.3rem;
     color: white;
     font-size: 2.5rem;
-
+    font-family: 'Raleway', sans-serif;
 }
 
 .right-side>.contact>.number {
@@ -275,18 +264,20 @@ h4 {
     border-radius: 30%;
     padding: 0.8rem;
 }
-.socal> a > #insta{
+
+.socal>a>#insta {
     font-size: 3.2rem;
 
 }
-.socal> a >.socal-media {
+
+.socal>a>.socal-media {
     color: white;
     font-size: 3rem;
     border-radius: 50%;
 }
 
 .socal>a:hover {
-    background-color: red;
+    background-color: #16f087;
 }
 
 /* ----------------------------------------left side ---------------------------------------- */
@@ -304,13 +295,6 @@ h4 {
     position: relative;
 }
 
-.left-side>#img::after {
-    content: "";
-    position: absolute;
-    background-color: yellow;
-    height: 12rem;
-
-}
 
 
 
@@ -329,6 +313,9 @@ h4 {
 @media (max-width:880px) {
     .home {
         gap: 1.2rem;
+    }
+    .section {
+        padding: 8vh 5vw;
     }
 }
 
@@ -354,9 +341,7 @@ h4 {
 }
 
 @media (max-width:525px) {
-    .home {
-        padding: 0 5rem;
-    }
+
 
     .right-side>.name>h1 {
         font-size: 4rem;
@@ -392,12 +377,16 @@ h4 {
 
 
 /*============================= About me ============================= */
-.main-container{
-    background:var(--About-bg-color) ;
+.about-section {
+    padding-bottom: 8rem;
 }
+
+.main-container {
+    background: var(--About-bg-color);
+}
+
 .about-me {
     padding: 2rem;
-
 }
 
 .container {
@@ -413,9 +402,21 @@ h4 {
 .section-titel>h2 {
     font-size: 2rem;
     letter-spacing: 2px;
-    color: rgb(216, 211, 211);
+    color: rgb(177, 173, 173);
     padding-bottom: 1.6rem;
     text-transform: uppercase;
+    position: relative;
+    display: table;
+}
+
+.section-titel>h2::after {
+    content: "";
+    position: absolute;
+    left: 110%;
+    top: 30%;
+    height: 2px;
+    width: 15rem;
+    background-color: #16f087;
 }
 
 .section-titel>p {
@@ -424,24 +425,16 @@ h4 {
     display: inline;
     width: 100%;
     letter-spacing: 2px;
-    color: rgb(216, 211, 211);
-    position: relative;
+    color: rgb(192, 186, 186);
+    
 }
 
-.section-titel>p::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background-color: red;
-}
 
 .info>h2 {
     font-size: 3.7rem;
     color: var(--main-textgreen-color);
     margin-bottom: 1.2rem;
+    
 }
 
 .info>p {
@@ -480,43 +473,143 @@ h4 {
 /* ====================tech container ==================== */
 
 
-.tech-container{
+.tech-container {
     padding: 2rem;
 }
-.tech{
-    display: flex;
+
+.tech {
+    display: grid;
     gap: 5rem;
     padding: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+
 }
-.trch-item{
-    width: 28rem;
-    background: rgba(51, 49, 49, 0.6);
+
+.tech-item {
+    width: 18vw;
+    background: rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
 }
-.trch-item:hover{
+
+.tech-item:hover {
     background: rgba(80, 76, 76, 0.6);
-    
+
 }
-.trch-item > p{
+
+.tech-item>h3 {
     padding-left: 0.7rem;
     font-size: 2.6rem;
 }
-.trch-item > #html {
-    color: red;
+
+.html {
+   color: rgb(232, 26, 26);
     font-size: 6rem;
 }
-.trch-item > #css {
-    color: blue;
-    font-size: 6rem;
+
+.css {
+    color: #2965f1;
+      font-size: 6rem;
 }
-.trch-item > #javaScript {
+
+.javaScript {
     color: yellow;
     font-size: 6rem;
 }
-.trch-item > #react {
+
+.react {
     color: #eb0756;
     font-size: 6rem;
+}
+
+.dedux {
+    color: #5a3498;
+    font-size: 6rem;
+}
+
+.wordpress {
+    color: #21759b;
+    font-size: 6rem;
+}
+
+.git {
+    color: #f34f29;
+    font-size: 6rem;
+}
+
+.tailwindCss {
+    color: #3490dc;
+    font-size: 6rem;
+}
+
+
+
+/* ==============responsive About============== */
+
+
+
+
+@media (max-width:940px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container>.my-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container>.my-img>img {
+        width: 50%;
+    }
+
+    .tech {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .tech-item {
+        width: 24vw;
+    }
+
+}
+
+@media (max-width:715px) {
+    .tech {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .tech-item {
+        width: 35vw;
+    }
+
+    .container>.my-img>img {
+        width: 90%;
+    }
+}
+
+@media (max-width:640px) {
+    .socal-link {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-titel>p::after {
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .tech {
+        grid-template-columns: 1fr;
+
+    }
+
+    .tech-item {
+        width: 75vw;
+    }
 }
