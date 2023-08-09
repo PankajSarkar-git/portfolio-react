@@ -762,6 +762,14 @@ h4 {
     justify-content: flex-start;
     flex-direction: column;
 }
+.inpit-container{
+    display: flex;
+    flex-direction: column;
+}
+.inpit-container > label{
+   font-size: 3rem;
+   margin-bottom: 0.5rem;
+}
 
 #form>.name-email {
     display: flex;
@@ -770,10 +778,9 @@ h4 {
     margin: 1.2rem 0;
 }
 
-#form>.name-email>input {
+#form>.name-email>.inpit-container > input {
     border-radius: 10px;
     padding: 0.3rem;
-    width: 50%;
     font-size: 3rem;
 }
 
@@ -785,13 +792,13 @@ h4 {
     margin: 1.2rem 0;
 }
 
-.sub-message>input {
+.sub-message>.inpit-container >input {
     border-radius: 10px;
     padding: 0.3rem;
     font-size: 3rem;
 }
 
-.sub-message>textarea {
+.sub-message>.inpit-container >textarea {
     border-radius: 10px;
     padding: 0.3rem;
     font-size: 3rem;
@@ -836,7 +843,7 @@ background-color: #06cd6d;
     #form>.name-email {
         flex-direction: column;
     }
-    #form>.name-email>input {
+    #form>.name-email>.inpit-container {
       width: 100%;
     }
 }

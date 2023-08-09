@@ -1,5 +1,6 @@
 import React from "react";
 import { MdEmail, MdLocationOn, MdPhone, MdShare } from "react-icons/md";
+import { emailSendLink } from "../utilitis/constant";
 
 const Contact = () => {
   return (
@@ -55,41 +56,61 @@ const Contact = () => {
                 <p>Contact me</p>
               </div>
               <div className="form-container">
-                <form action="" id="form">
+                <form
+                  action={emailSendLink}
+                  id="form"
+                  method="POST"
+                >
                   <div className="name-email">
-                    <input
-                      type="text"
-                      required
-                      name=""
-                      id="name"
-                      placeholder="Enter Your Name"
-                    />
-                    <input
-                      type="email"
-                      required
-                      name=""
-                      id="email"
-                      placeholder="Enter Your Email"
-                    />
+                    <div className="inpit-container">
+                      <label htmlFor="">Name</label>
+                      <input
+                        type="text"
+                        required
+                        name="UserName"
+                        id="name"
+                        placeholder="Enter Your Name"
+                      />
+                    </div>
+                    <div className="inpit-container">
+                      <label htmlFor="">Email</label>
+                      <input
+                        type="email"
+                        required
+                        name="Email"
+                        id="email"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
                   </div>
                   <div className="sub-message">
+                  <div className="inpit-container">
+                  <label htmlFor="">Subject</label>
                     <input
                       type="text"
-                      name=""
+                      name="Subject"
                       id="subject"
                       placeholder="Subject"
                       required
                     />
+                  </div>
+                  <div className="inpit-container">
+                  <label htmlFor="">Message</label>
                     <textarea
-                      name=""
-                      id="message"
+                      name="message"
+                      id="Message"
                       cols="30"
                       rows="5"
                       required
                       placeholder="Type Your Message"
                     ></textarea>
                   </div>
-                  <input type="submit" value="Send Message"  className="button"/>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    className="button"
+                  />
                 </form>
               </div>
             </div>
