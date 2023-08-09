@@ -19,8 +19,8 @@ const About = () => {
     <div>
       <section className="section about-section sectionActive">
         {/* ===================== About me  ===================== */}
-        <div className="main-container">
-          <div className="about-me">
+        <div className="main-container"> 
+          <div className="section-container">
             <div className="section-titel">
               <h2>About</h2>
               <p>Learn more about me</p>
