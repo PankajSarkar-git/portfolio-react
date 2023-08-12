@@ -1,6 +1,6 @@
 import React from "react";
 import { MdEmail, MdLocationOn, MdPhone, MdShare } from "react-icons/md";
-import { emailSendLink } from "../utilitis/constant";
+// import { emailSendLink } from "../utilitis/constant";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 import {AiFillInstagram } from "react-icons/ai";
 
@@ -73,7 +73,7 @@ const Contact = () => {
               </div>
               <div className="form-container">
                 <form
-                  action={emailSendLink}
+                  action="https://formspree.io/f/xqkvperj"
                   id="form"
                   method="POST"
                 >
