@@ -22,7 +22,7 @@ const About = () => {
         <div className="main-container"> 
           <div className="section-container">
             <div className="section-titel">
-              <h2>About</h2>
+              <h3>About</h3>
               <p>Learn more about me</p>
             </div>
             <div className="container container-About">

@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npx parcel public/index.html",
+    "build": "parcel build public/index.html",
     "test": "test"
   },
   "author": "Pankaj Sarkar",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-webmanifest": "^2.9.3",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
   },

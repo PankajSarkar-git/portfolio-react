@@ -1,4 +1,4 @@
-import home from "../homeimgs/home.png";
+import home from "../imgs/home.png";
 import "./componentStyle.css";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 import {AiFillInstagram } from "react-icons/ai";

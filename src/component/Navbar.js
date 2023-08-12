@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./componentStyle.css";
 import { Menu , X} from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -24,19 +24,19 @@ const Navbar = () => {
         {/*============= nav Link=============  */}
         <ul className= {mobileNav ? "unOderList activeNav " : "unOderList"} >
           <li className="nav-links">
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="nav-links">
-            <Link to="/About">About Me</Link>
+            <NavLink to="/About">About Me</NavLink>
           </li>
           <li className="nav-links">
-            <Link to="/EducationExperiences">Education</Link>{" "}
+            <NavLink to="/EducationExperiences">Education</NavLink>{" "}
           </li>
           <li className="nav-links">
-            <Link to="/Project">Project</Link>
+            <NavLink to="/Project">Project</NavLink>
           </li>
           <li className="nav-links">
-            <Link to="/Contact">Contact</Link>
+            <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
         {/* ==========Mobile menu========== */}
