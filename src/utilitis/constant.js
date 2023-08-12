@@ -1,1 +1,0 @@
-export const emailSendLink = "https://formspree.io/f/xqkvperj";

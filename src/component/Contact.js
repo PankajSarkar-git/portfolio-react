@@ -1,6 +1,5 @@
 import React from "react";
 import { MdEmail, MdLocationOn, MdPhone, MdShare } from "react-icons/md";
-// import { emailSendLink } from "../utilitis/constant";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 import {AiFillInstagram } from "react-icons/ai";
 
