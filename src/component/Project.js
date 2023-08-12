@@ -1,5 +1,5 @@
 import React from "react";
-import project1 from "../imgs/project 1.png";
+import project from "../imgs/project.png";
 import project2 from "../imgs/project 2.png";
 import project3 from "../imgs/project 3.png";
 import { BsCode, BsGithub } from "react-icons/bs";
@@ -17,7 +17,7 @@ const Project = () => {
             <div className="projects">
               <div className="project-card">
                 <div className="project-item">
-                  <img src={project1} alt="" />
+                  <img src={project} alt="" />
                 </div>
                 <div className="project-info">
                   <h5>Weather Web App</h5>
