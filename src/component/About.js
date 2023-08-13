@@ -109,7 +109,7 @@ const About = () => {
       <section className="section sectionActive"> */}
           <div className="tech-container">
             <div className="section-titel">
-              <h2>Tech-Stack I use</h2>
+              <h3>Tech-Stack I use</h3>
             </div>
             <div className="tech">
               <div className="tech-item">
@@ -127,7 +127,7 @@ const About = () => {
             </div>
             <div className="skills ech-container">
               <div className="section-titel">
-                <h2>Skills</h2>
+                <h3>Skills</h3>
               </div>
               <div className="tech">
                 <div className="tech-item">

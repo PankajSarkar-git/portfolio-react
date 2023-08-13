@@ -40,12 +40,12 @@ const EducationExperiences = () => {
               <div className="resume-item">
                 <h4>higher secondary</h4>
                 <p><em>Shilbari Hat High School</em></p>
-                <h5>2011-2028</h5>
+                <h5>2011-2018</h5>
                 <p><em>
                 Completed my Higher Secondary education from this school.
                 </em></p>
                 <ul>
-                    <li><a href="http://www.falakatacollege.org.in/index.aspx">Falakata College</a></li>
+                    <li><a href="#">SHILBARIHAT HIGH SCHOOL</a></li>
                 </ul>
               </div>
             </div>
