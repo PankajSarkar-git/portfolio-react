@@ -47,6 +47,9 @@ h4 {
     width: 100%;
     z-index: 899;
 }
+.nav-titel > h2 {
+    cursor: pointer;
+}
 
 .navbar>.unOderList {
     display: flex;
@@ -884,12 +887,12 @@ textarea::placeholder {
 @media (max-width:800px) {
     .contact-container {
         grid-template-columns: 1fr;
-        margin: 0rem;
+        margin: 0;
     }
     #form>.button {
         width: 20rem;
     }
-
+    
     .section-titel>h3 {
         font-size: 1.6rem;
     }
@@ -897,7 +900,9 @@ textarea::placeholder {
     .section-titel>p {
         font-size: 4rem;
     }
-
+.form-container{
+    margin: 2rem;
+}
 
 }
 
@@ -906,42 +911,62 @@ textarea::placeholder {
         flex-direction: column;
     }
 
-    #form>.name-email>.inpit-container {
+    /* #form>.name-email>.inpit-container {
+        width: 100%;
+    } */
+    form{
         width: 100%;
     }
+
 }
 
 @media (max-width:560px) {
     #form {
         justify-content: center;
         align-items: center;
+        /* width: 100%; */
+      
     }
 
     #form>.name-email {
-        width: 80%;
+        width: 100%;
     }
 
     .sub-message {
-        width: 80%;
+        width: 100%;
     }
+    
 }
 
 @media (max-width:400px) {
     .section-titel > p {
         font-size: 3rem;
       }
-
+      
+      .form-container {
+        margin: 0rem;
+    }
     #form>.name-email {
-        width: 70%;
+        width: 80%;
     }
 
     .sub-message {
-        width: 70%;
+        width: 80%;
     }
 }
+@media (max-width:460px) {
+   
+}
+/* @media (max-width:410px) {
+   form{
+    width: 100%;
+   }
+} */
 
-@media (max-width:340px) {
-    
+@media (max-width:360px) {
+    .form-container {
+        margin: 0rem;
+    }
     .tech {
         margin: 0rem;
     }
@@ -974,10 +999,10 @@ textarea::placeholder {
     }
 
     #form>.name-email {
-        width: 50%;
+        width: 80%;
     }
     .sub-message {
-        width: 50%;
+        width: 80%;
     }
 }
 
