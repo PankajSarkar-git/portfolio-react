@@ -947,11 +947,11 @@ textarea::placeholder {
         margin: 0rem;
     }
     #form>.name-email {
-        width: 80%;
+        width: 90%;
     }
 
     .sub-message {
-        width: 80%;
+        width: 90%;
     }
 }
 @media (max-width:460px) {
@@ -968,7 +968,7 @@ textarea::placeholder {
         margin: 0rem;
     }
     .tech {
-        margin: 0rem;
+        margin: 0.6rem;
     }
 
     .contact-container {
@@ -999,10 +999,10 @@ textarea::placeholder {
     }
 
     #form>.name-email {
-        width: 80%;
+        width: 90%;
     }
     .sub-message {
-        width: 80%;
+        width: 90%;
     }
 }
 
