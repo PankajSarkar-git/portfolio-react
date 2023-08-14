@@ -59,6 +59,7 @@ h4 {
 
 .navbar>.unOderList>.nav-links {
     list-style: none;
+    cursor: pointer;
 }
 
 .navbar>.unOderList>.nav-links a {
@@ -815,9 +816,12 @@ h4 {
 }
 
 #form>.name-email>.inpit-container>input {
-    border-radius: 10px;
-    padding: 0.3rem;
+    /* border-radius: 10px; */
+    padding: 0.6rem;
     font-size: 3rem;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.6);
+    
 }
 
 .sub-message {
@@ -827,17 +831,30 @@ h4 {
     gap: 2rem;
     margin: 1.2rem 0;
 }
-
+input::placeholder{
+    color:#06cd6d;
+}
+textarea::placeholder { 
+    color: #06cd6d;
+    opacity: 1;
+  }
 .sub-message>.inpit-container>input {
-    border-radius: 10px;
-    padding: 0.3rem;
+    /* border-radius: 10px; */
+    padding: 0.6rem;
     font-size: 3rem;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.6);
+   
 }
 
 .sub-message>.inpit-container>textarea {
-    border-radius: 10px;
-    padding: 0.3rem;
+    /* border-radius: 10px; */
+    padding: 0.6rem;
+    border: none;
+    background-color:rgba(36, 33, 33, 0.6);
     font-size: 3rem;
+    color:var(--main-textgreen-color);
+    
 }
 
 #form>.button {
@@ -867,10 +884,6 @@ h4 {
         grid-template-columns: 1fr;
         margin: 0rem;
     }
-
-    /* .tech-item {
-        width: 72vw;
-    } */
     #form>.button {
         width: 20rem;
     }

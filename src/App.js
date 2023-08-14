@@ -3,49 +3,36 @@ import Home from "./component/Home";
 import About from "./component/About";
 import Contact from "./component/Contact";
 import Project from "./component/Project";
-import {  Outlet, createBrowserRouter } from "react-router-dom";
+// import {  Outlet, createBrowserRouter } from "react-router-dom";
 // import EducationExperiences from "./component/EducationExperiences";
 import EducationExperiences from "./component/EducationExperiences";
-
-
+import { useState } from "react";
 
 const App = () => {
-  return(
-    <div className="main">
-      <Navbar/>
-      <Outlet/>
-    </div>
-  )
-}
+  const [showComponent, setShowComponent] = useState("home");
 
-export const router = createBrowserRouter([
-  {
-    path : "/",
-    element : <App/>,
-    children : [
+  return (
+    <div className="main">
+      <Navbar setShowComponent={setShowComponent} showComponent={showComponent} />
       {
-        path : "/",
-        element : <Home/>
-      },
-      {
-        path : "/About",
-        element : <About/>
-      },
-      {
-        path : "/EducationExperiences",
-        element : <EducationExperiences/>
-      },
-      {
-        path : "/contact",
-        element : <Contact/>
-      },
-      {
-        path : "/project",
-        element : <Project/>
+        showComponent === "home" && <Home/>
       }
-    ]
-  }
-])
+      {
+        showComponent === "about" && <About/>
+      }
+      {
+        showComponent === "education" && <EducationExperiences/>
+      }
+      {
+        showComponent === "project" && <Project/>
+      }
+      {
+        showComponent === "contact" && <Contact/>
+      }
+      
+    </div>
+  );
+};
 
 
 
