@@ -821,6 +821,7 @@ h4 {
     font-size: 3rem;
     border: none;
     background-color: rgba(36, 33, 33, 0.6);
+    color:var(--main-textgreen-color);
     
 }
 
@@ -844,6 +845,7 @@ textarea::placeholder {
     font-size: 3rem;
     border: none;
     background-color: rgba(36, 33, 33, 0.6);
+    color:var(--main-textgreen-color);
    
 }
 
