@@ -20,7 +20,7 @@ const Navbar = ({ setShowComponent,showComponent }) => {
       {/* ================navBar================ */}
       <nav className="navbar top-nav">
         {/* ==================name================== */}
-        <div className="nav-titel">
+        <div className="nav-titel" onClick={() => setShowComponent("home")}>
           <h2>Pankaj Sarkar</h2>
         </div>
         {/*============= nav Link=============  */}
