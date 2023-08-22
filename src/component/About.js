@@ -37,13 +37,7 @@ const About = () => {
                 <div className="info">
                   <h2>Front-end web-developer</h2>
                   <p>
-                    Writing code to build proper functional web apps is my
-                    passion. I have a strong background in web development and
-                    have worked on various projects. I am a self-motivated and
-                    self-driven individual who is always looking for new
-                    challenges and opportunities.I have been curious to learn
-                    about new kinds of technologies since childhood and realized
-                    that this is what I'm most passionate about.
+                  Writing code to build proper functional web apps is my passion. I have a strong background in web development and have worked on various projects, which I've mentioned in my resume here . I am a self-motivated and self-driven individual and, I promise to take it all up with utmost responsibility whenever my cup is filled with new opportunities and challenges. I have always been curious to learn about new kinds of technologies since my childhood and realized that this is what I feel most enthusiastic about.
                   </p>
                 </div>
                 <div className="socal-link">
