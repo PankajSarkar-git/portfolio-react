@@ -184,11 +184,11 @@ h4 {
 
     .navbar>.unOderList>.nav-links:hover::after,
     .navbar>.unOderList>.nav-links:active::after {
-        width: 7rem;
+        width: 100%;
     }
 
     .navbar>.unOderList>.active::after {
-        width: 7rem;
+        width: 100%;
     }
 
     .mobile {
