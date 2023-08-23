@@ -26,7 +26,7 @@ const Navbar = ({ setShowComponent,showComponent }) => {
         {/*============= nav Link=============  */}
         <ul className={mobileNav ? "unOderList activeNav " : "unOderList"}>
           <li className="nav-links">
-            <a href="" onClick={() => setShowComponent("home")} className={showComponent=== "home" ? "active" : "mav-a"}>Home</a>
+            <a   href="" onClick={() => setShowComponent("home")} className={showComponent=== "home" ? "active" : "mav-a"}>Home</a>
           </li>
           <li className="nav-links">
             <a href="#"  onClick={() => setShowComponent("about")} className={showComponent=== "about" ? "active" : "mav-a"}>About Me</a>
