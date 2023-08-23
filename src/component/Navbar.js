@@ -25,20 +25,15 @@ const Navbar = ({ setShowComponent,showComponent }) => {
         </div>
         {/*============= nav Link=============  */}
         <ul className={mobileNav ? "unOderList activeNav " : "unOderList"}>
-          <li className="nav-links">
-            <a   href="" onClick={() => setShowComponent("home")} className={showComponent=== "home" ? "active" : "mav-a"}>Home</a>
+          <li onClick={() => setShowComponent("home")} className={showComponent=== "home" ? "active nav-links " : "mav-a nav-links"}>Home
           </li>
-          <li className="nav-links">
-            <a href="#"  onClick={() => setShowComponent("about")} className={showComponent=== "about" ? "active" : "mav-a"}>About Me</a>
+          <li  onClick={() => setShowComponent("about")} className={showComponent=== "about" ? "active nav-links" : "mav-a nav-links"}>About Me
           </li>
-          <li className="nav-links">
-            <a href="#"  onClick={() => setShowComponent("education")} className={showComponent=== "education" ? "active" : "mav-a"}>Education</a>
+          <li  onClick={() => setShowComponent("education")} className={showComponent=== "education" ? "active nav-links" : "mav-a nav-links"}>Education
           </li>
-          <li className="nav-links">
-            <a href="#"  onClick={() => setShowComponent("project")} className={showComponent=== "project" ? "active" : "mav-a"}>Project</a>
+          <li  onClick={() => setShowComponent("project")} className={showComponent=== "project" ? "active nav-links" : "mav-a nav-links"}>Project
           </li>
-          <li className="nav-links">
-            <a href="#"  onClick={() => setShowComponent("contact")} className={showComponent=== "contact" ? "active" : "mav-a"}>Contact</a>
+          <li  onClick={() => setShowComponent("contact")} className={showComponent=== "contact" ? "active nav-links" : "mav-a nav-links"}>Contact
           </li>
         </ul>
         {/* ==========Mobile menu========== */}

@@ -65,7 +65,7 @@ h4 {
     cursor: pointer;
 }
 
-.navbar>.unOderList>.nav-links a {
+.navbar>.unOderList>.nav-links {
     position: relative;
     margin-left: 3rem;
     font-size: 1.5rem;
@@ -74,12 +74,12 @@ h4 {
     text-decoration: none;
 }
 
-.navbar>.unOderList>.nav-links a:hover,
-.navbar>.unOderList>.nav-links a:active {
+.navbar>.unOderList>.nav-links:hover,
+.navbar>.unOderList>.nav-links:active {
     color: var(--main-textgreen-color);
 }
 
-.navbar>.unOderList>.nav-links a::after {
+.navbar>.unOderList>.nav-links::after {
     content: "";
     position: absolute;
     background-color: var(--main-textgreen-color);
@@ -90,17 +90,17 @@ h4 {
     transition: .3s;
 }
 
-.navbar>.unOderList>.nav-links>.active {
+.navbar>.unOderList>.active {
     color: var(--main-textgreen-color);
 }
 
-.navbar>.unOderList>.nav-links>.active::after {
+.navbar>.unOderList>.active::after {
     width: 100%;
 }
 
 
-.navbar>.unOderList>.nav-links a:hover::after,
-.navbar>.unOderList>.nav-links a:active::after {
+.navbar>.unOderList>.nav-links:hover::after,
+.navbar>.unOderList>.nav-links:active::after {
     width: 100%;
 }
 
@@ -127,7 +127,7 @@ h4 {
 
     }
 
-    .navbar>.unOderList>.nav-links a {
+    .navbar>.unOderList>.nav-links {
         font-size: 1.3rem;
     }
 }
@@ -137,8 +137,7 @@ h4 {
         font-size: 1.8rem;
         height: 7vh;
     }
-
-    .navbar>.unOderList>.nav-links a {
+    .navbar>.unOderList>.nav-links {
         font-size: 1.3rem;
     }
 }
@@ -158,7 +157,8 @@ h4 {
         background: rgba(1, 1, 50, 0.8);
         height: 93vh;
         width: 60vw;
-        justify-content: space-around;
+        /* justify-content: flex-start; */
+        align-items: flex-start;
         transition: transform 0.5s;
         z-index: 9999;
 
@@ -182,22 +182,14 @@ h4 {
         z-index: 99999;
     }
 
-    .navbar>.unOderList>.nav-links a:hover::after,
-    .navbar>.unOderList>.nav-links a:active::after {
+    .navbar>.unOderList>.nav-links:hover::after,
+    .navbar>.unOderList>.nav-links:active::after {
         width: 7rem;
     }
 
-    .navbar>.unOderList>.nav-links>.active::after {
+    .navbar>.unOderList>.active::after {
         width: 7rem;
     }
-
-    .navbar>.unOderList>.nav-links a {
-        position: absolute;
-        left: 0;
-        font-size: 1.5rem;
-        width: 100%;
-    }
-
 
     .mobile {
         display: flex;
