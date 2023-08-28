@@ -20,7 +20,7 @@ const Project = () => {
                   <img src={project} alt="" />
                 </div>
                 <div className="project-info">
-                  <h5>Zumba Dance Class</h5>
+                  <h5>Weather Web App</h5>
                   <p> React | JavaScript | Fetch API | html5 | JSX |Css3 </p>
                   <div className="project-link">
                     <a href="https://github.com/PankajSarkar-git/weatherapp-react-js" target="_blank">
@@ -37,7 +37,7 @@ const Project = () => {
                   <img src={project2} alt="" />
                 </div>
                 <div className="project-info">
-                  <h5>Weather Web App</h5>
+                  <h5>Zumba Dance Class</h5>
                   <p>html5 |Css3| JavaScript </p>
                   <div className="project-link">
                     <a href="https://github.com/PankajSarkar-git/zumbaclasss" target="_blank">
