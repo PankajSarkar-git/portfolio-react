@@ -2,6 +2,7 @@ import React from "react";
 import project from "../imgs/project.png";
 import project2 from "../imgs/project 2.png";
 import project3 from "../imgs/project 3.png";
+import project4 from "../imgs/project 4.png";
 import { BsCode, BsGithub } from "react-icons/bs";
 
 const Project = () => {
@@ -61,6 +62,24 @@ const Project = () => {
                       <BsGithub id="git" />
                     </a>
                     <a href="https://pankajsarkar-git.github.io/todo-list-react.js/" target="_blank">
+                      <BsCode id="code" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="project-card">
+                <div className="project-item">
+                  <img src={project4} alt="" />
+                </div>
+                <div className="project-info">
+                  <h5>Zap! Ecommerce</h5>
+                  <p> React | Redux-Toolkit | JavaScript | html5 | JSX |Css3 |Tailwindcss</p>
+                  <p> It is a work in progress </p>
+                  <div className="project-link">
+                    <a href="https://github.com/PankajSarkar-git/E-Commerce-website" target="_blank">
+                      <BsGithub id="git" />
+                    </a>
+                    <a href="https://zap-ecommerce.vercel.app/" target="_blank">
                       <BsCode id="code" />
                     </a>
                   </div>
