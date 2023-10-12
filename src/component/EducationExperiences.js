@@ -9,7 +9,7 @@ const EducationExperiences = () => {
             <div className="section-titel">
               <h3>Resume</h3>
               <p>
-                Check my resume <a target="_blank" href="https://drive.google.com/file/d/1INtvlZtJH8DvALmV-s56QNottzSsEKhs/view?usp=drive_link">HERE</a>
+                Check my resume <a target="_blank" href="https://drive.google.com/file/d/1FlgIA21tiaujQibRw1f2bH3N5r1hdJxa/view?usp=sharing">HERE</a>
               </p>
             </div>
             <div className="container resume-container">
