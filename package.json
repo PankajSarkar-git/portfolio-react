@@ -10,6 +10,7 @@
   "author": "Pankaj Sarkar",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
     "@parcel/transformer-webmanifest": "^2.9.3",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
@@ -21,5 +22,17 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
