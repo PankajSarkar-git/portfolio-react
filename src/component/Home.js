@@ -40,7 +40,7 @@ const Home = () => {
           </div>
           {/*=================== Photo =================== */}
           <div className="left-side">
-            <img src={home} alt="" id="img" />
+            <img src={home} alt="pankaj sarkar web devloper " id="img" />
           </div>
         </div>
       </section>

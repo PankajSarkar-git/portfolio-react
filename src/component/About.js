@@ -29,7 +29,7 @@ const About = () => {
               <div className="my-img">
                 <img
                   src="https://avatars.githubusercontent.com/u/126690794?v=4"
-                  alt=""
+                  alt="Pankaj Sarkar"
                   className=""
                 />
               </div>
