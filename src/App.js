@@ -15,29 +15,38 @@ const App = () => {
   return (
     <div className="main">
       <Helmet>
-        {/* Page Title */}
+        {/* Page Title - Keep it under 60 characters */}
         <title>Pankaj Sarkar | Web Developer | React & JavaScript</title>
 
-        {/* Meta Description */}
+        {/* Meta Description - Keep it under 160 characters */}
         <meta
           name="description"
-          content="Pankaj Sarkar is a skilled web developer specializing in React, JavaScript, and frontend development. Explore my portfolio and projects."
+          content="Pankaj Sarkar is a web developer specializing in React, JavaScript, and responsive web development. Explore my portfolio and projects."
         />
 
-        {/* Keywords for SEO */}
+        {/* Meta Keywords - List your key skills and name */}
         <meta
           name="keywords"
-          content="Pankaj Sarkar, Web Developer, React Developer, JavaScript, Frontend Developer, Portfolio"
+          content="Pankaj Sarkar, Web Developer, React, JavaScript, Frontend Developer, Portfolio, Responsive Design"
         />
 
-        {/* Open Graph Meta Tags for Social Media */}
+        {/* Canonical URL - Helps search engines know the main page */}
+        <link
+          rel="canonical"
+          href="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
+        />
+
+        {/* Robots - Tells search engines to index and follow links */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph Meta Tags for Social Media Sharing */}
         <meta
           property="og:title"
           content="Pankaj Sarkar - Web Developer Portfolio"
         />
         <meta
           property="og:description"
-          content="Explore projects and web development expertise of Pankaj Sarkar, specializing in React and JavaScript."
+          content="Explore the web development projects and skills of Pankaj Sarkar, specializing in React and JavaScript."
         />
         <meta
           property="og:image"
@@ -49,26 +58,39 @@ const App = () => {
         />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card for Social Media */}
+        {/* Twitter Card Meta Tags for Social Media Sharing */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pankaj Sarkar - Web Developer" />
         <meta
           name="twitter:description"
-          content="Web developer Pankaj Sarkar specializes in React and JavaScript. Check out his portfolio!"
+          content="Explore my web development projects built with React, JavaScript, and modern frontend technologies."
         />
         <meta
           name="twitter:image"
           content="https://avatars.githubusercontent.com/u/126690794?v=4"
         />
 
-        {/* Canonical URL */}
-        <link
-          rel="canonical"
-          href="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
-        />
-
-        {/* Robots Tag */}
-        <meta name="robots" content="index, follow" />
+        {/* Structured Data for Google (JSON-LD Schema) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Pankaj Sarkar",
+            jobTitle: "Web Developer",
+            url: "https://pankaj-sarkar-pankajsarkar-git.vercel.app/",
+            sameAs: [
+              "https://github.com/PankajSarkar-git",
+              "https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/",
+            ],
+            description:
+              "Pankaj Sarkar is a web developer with expertise in React, JavaScript, and frontend development.",
+            worksFor: {
+              "@type": "Organization",
+              name: "Freelance",
+            },
+            image: "https://avatars.githubusercontent.com/u/126690794?v=4",
+          })}
+        </script>
       </Helmet>
 
       <Navbar
