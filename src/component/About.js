@@ -14,12 +14,13 @@ import {
   BiLogoTailwindCss,
   BiLogoWordpress,
 } from "react-icons/bi";
+import "./about.css";
 const About = () => {
   return (
     <div>
       <section className="section about-section sectionActive">
         {/* ===================== About me  ===================== */}
-        <div className="main-container"> 
+        <div className="main-container">
           <div className="section-container">
             <div className="section-titel">
               <h3>About</h3>
@@ -37,7 +38,15 @@ const About = () => {
                 <div className="info">
                   <h2>Front-end web-developer</h2>
                   <p>
-                  Writing code to build proper functional web apps is my passion. I have a strong background in web development and have worked on various projects, which I've mentioned in my resume here . I am a self-motivated and self-driven individual and, I promise to take it all up with utmost responsibility whenever my cup is filled with new opportunities and challenges. I have always been curious to learn about new kinds of technologies since my childhood and realized that this is what I feel most enthusiastic about.
+                    Writing code to build proper functional web apps is my
+                    passion. I have a strong background in web development and
+                    have worked on various projects, which I've mentioned in my
+                    resume here . I am a self-motivated and self-driven
+                    individual and, I promise to take it all up with utmost
+                    responsibility whenever my cup is filled with new
+                    opportunities and challenges. I have always been curious to
+                    learn about new kinds of technologies since my childhood and
+                    realized that this is what I feel most enthusiastic about.
                   </p>
                 </div>
                 <div className="socal-link">
@@ -131,7 +140,8 @@ const About = () => {
                   <BiLogoCss3 className="css" /> <h3>CSS3</h3>
                 </div>
                 <div className="tech-item">
-                  <BiLogoJavascript className="javaScript" /> <h3>JavaScript</h3>
+                  <BiLogoJavascript className="javaScript" />{" "}
+                  <h3>JavaScript</h3>
                 </div>
                 <div className="tech-item">
                   <BiLogoReact className="react" /> <h3>React JS</h3>

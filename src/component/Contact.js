@@ -1,8 +1,8 @@
 import React from "react";
 import { MdEmail, MdLocationOn, MdPhone, MdShare } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
-import {AiFillInstagram } from "react-icons/ai";
-
+import { AiFillInstagram } from "react-icons/ai";
+import "./contact.css";
 const Contact = () => {
   return (
     <>
@@ -30,19 +30,31 @@ const Contact = () => {
                 <div className="contact-info">
                   <h4>MSocial Profiles</h4>
                   <div className="socal">
-              <a href="https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/" target="_blank">
-                <BsLinkedin  className="socal-media" />
-              </a>
-              <a href="https://github.com/PankajSarkar-git" target="_blank">
-                <BsGithub  className="socal-media" />
-              </a>
-              <a href="https://www.instagram.com/below_average_boy_/" target="_blank">
-                <AiFillInstagram id="insta" className="socal-media" />
-              </a>
-              <a href="https://www.facebook.com/pankaj.sarkar.5059601" target="_blank">
-                <BsFacebook className="socal-media" />
-              </a>
-            </div>
+                    <a
+                      href="https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/"
+                      target="_blank"
+                    >
+                      <BsLinkedin className="socal-media" />
+                    </a>
+                    <a
+                      href="https://github.com/PankajSarkar-git"
+                      target="_blank"
+                    >
+                      <BsGithub className="socal-media" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/below_average_boy_/"
+                      target="_blank"
+                    >
+                      <AiFillInstagram id="insta" className="socal-media" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/pankaj.sarkar.5059601"
+                      target="_blank"
+                    >
+                      <BsFacebook className="socal-media" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="tech-item contact-item">
@@ -99,27 +111,27 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="sub-message">
-                  <div className="inpit-container">
-                  <label htmlFor="">Subject</label>
-                    <input
-                      type="text"
-                      name="Subject"
-                      id="subject"
-                      placeholder="Subject"
-                      required
-                    />
-                  </div>
-                  <div className="inpit-container">
-                  <label htmlFor="">Message</label>
-                    <textarea
-                      name="message"
-                      id="Message"
-                      cols="30"
-                      rows="5"
-                      required
-                      placeholder="Type Your Message"
-                    ></textarea>
-                  </div>
+                    <div className="inpit-container">
+                      <label htmlFor="">Subject</label>
+                      <input
+                        type="text"
+                        name="Subject"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                      />
+                    </div>
+                    <div className="inpit-container">
+                      <label htmlFor="">Message</label>
+                      <textarea
+                        name="message"
+                        id="Message"
+                        cols="30"
+                        rows="5"
+                        required
+                        placeholder="Type Your Message"
+                      ></textarea>
+                    </div>
                   </div>
                   <input
                     type="submit"

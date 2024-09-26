@@ -1,0 +1,270 @@
+/*============================= contact me ============================= */
+
+.contact-container {
+    margin: 3rem;
+    grid-template-columns: repeat(2, auto);
+    gap: 2.8rem;
+}
+
+
+.contact-item>.contact-logo {
+    margin: 1.2rem;
+    margin-right: 1.8rem;
+    padding: 0.9rem;
+    background-color: #6f6464;
+    border-radius: 50%;
+}
+
+.contact-item>.contact-logo>.logo {
+    font-size: 3rem;
+    color: var(--main-textgreen-color);
+
+}
+
+.contact-item {
+    width: auto;
+}
+
+.contact-item>.contact-info>h4 {
+    font-size: 2.2rem;
+    color: #938484;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.contact-item>.contact-info>p {
+    font-size: 1.6rem;
+
+}
+
+/* const form  */
+.contact-form {
+    margin-top: 2rem;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-container {
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.inpit-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.inpit-container>label {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#form>.name-email {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.2rem 0;
+}
+
+#form>.name-email>.inpit-container>input {
+    /* border-radius: 10px; */
+    padding: 0.6rem;
+    font-size: 3rem;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.6);
+    color: var(--main-textgreen-color);
+
+}
+
+.sub-message {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.2rem 0;
+}
+
+input::placeholder {
+    color: #06cd6d;
+}
+
+textarea::placeholder {
+    color: #06cd6d;
+    opacity: 1;
+}
+
+.sub-message>.inpit-container>input {
+    /* border-radius: 10px; */
+    padding: 0.6rem;
+    font-size: 3rem;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.6);
+    color: var(--main-textgreen-color);
+
+}
+
+.sub-message>.inpit-container>textarea {
+    /* border-radius: 10px; */
+    padding: 0.6rem;
+    border: none;
+    background-color: rgba(36, 33, 33, 0.6);
+    font-size: 3rem;
+    color: var(--main-textgreen-color);
+
+}
+
+#form>.button {
+    font-size: 2.5rem;
+    width: 25rem;
+    background-color: var(--main-textgreen-color);
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#form>.button:hover {
+    background-color: #06cd6d;
+
+}
+
+
+
+/* responsive */
+
+
+
+@media (max-width:800px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    #form>.button {
+        width: 20rem;
+    }
+
+    .section-titel>h3 {
+        font-size: 1.6rem;
+    }
+
+    .section-titel>p {
+        font-size: 4rem;
+    }
+
+    .form-container {
+        margin: 2rem;
+    }
+
+}
+
+@media (max-width:750px) {
+    #form>.name-email {
+        flex-direction: column;
+    }
+
+    /* #form>.name-email>.inpit-container {
+        width: 100%;
+    } */
+    form {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:560px) {
+    #form {
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+
+    }
+
+    #form>.name-email {
+        width: 100%;
+    }
+
+    .sub-message {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:400px) {
+    .section-titel>p {
+        font-size: 3rem;
+    }
+
+    .form-container {
+        margin: 0rem;
+    }
+
+    #form>.name-email {
+        width: 90%;
+    }
+
+    .sub-message {
+        width: 90%;
+    }
+}
+
+@media (max-width:460px) {}
+
+@media (max-width:360px) {
+    .form-container {
+        margin: 0rem;
+    }
+
+    .tech {
+        margin: 0.6rem;
+    }
+
+    .contact-container {
+        padding: 0;
+    }
+
+    .contact-item {
+        width: 100%;
+        padding: 1rem 0.3rem;
+    }
+
+    .logo {
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+
+    .contact-item>.contact-info>h4 {
+        font-size: 1.4rem;
+    }
+
+    .contact-item>.contact-info>p {
+        font-size: 1.2rem;
+    }
+
+    .socal-media {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+    #form>.name-email {
+        width: 90%;
+    }
+
+    .sub-message {
+        width: 90%;
+    }
+}

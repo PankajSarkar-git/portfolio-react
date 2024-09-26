@@ -1,0 +1,79 @@
+/* =====================================Education-Experiences===================================== */
+
+
+.resume-container {
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.container-titel {
+    font-size: 3rem;
+}
+
+.resume-item {
+    padding: 0 2rem;
+    border-left: 1px solid gray;
+    position: relative;
+}
+
+.resume-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--main-textgreen-color);
+}
+
+.resume-item>h4 {
+    font-size: 3rem;
+    color: var(--main-textgreen-color);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+.resume-item>p {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.resume-item>h5 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    padding: 1.3rem;
+    background-color: #363333;
+    display: inline-block;
+    width: inherit;
+}
+
+.resume-item>ul {
+    padding: 0 2rem;
+}
+
+.resume-item>ul>li>a {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: var(--main-textgreen-color);
+}
+
+.resume-item>ul>li {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.resume-item>ul>li:nth-child(2)>a {
+    text-transform: uppercase;
+}
+
+@media (max-width:350px) {
+    .resume-item>h4 {
+        font-size: 2.5rem;
+    }
+
+}

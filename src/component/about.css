@@ -1,0 +1,261 @@
+/*============================= About me ============================= */
+.about-section {
+    padding-bottom: 8rem;
+}
+
+.main-container {
+    background: var(--About-bg-color);
+}
+
+.section-container {
+    padding: 2rem;
+}
+
+.container {
+    padding-top: 2.2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.container>.my-img>img {
+    width: 30rem;
+}
+
+.section-titel>h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(177, 173, 173);
+    padding-bottom: 1.6rem;
+    text-transform: uppercase;
+    position: relative;
+    display: table;
+}
+
+.section-titel>h3::after {
+    content: "";
+    position: absolute;
+    left: 110%;
+    top: 30%;
+    height: 2px;
+    width: 15rem;
+    background-color: var(--main-textgreen-color);
+}
+
+.section-titel>p {
+    text-transform: uppercase;
+    font-size: 5rem;
+    display: inline;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(192, 186, 186);
+
+}
+
+.section-titel>p>a {
+    text-decoration: none;
+    color: var(--main-textgreen-color);
+
+}
+
+
+.info>h2 {
+    font-size: 3.7rem;
+    color: var(--main-textgreen-color);
+    margin-bottom: 1.2rem;
+
+}
+
+.info>p {
+    font-size: 2rem;
+
+}
+
+
+.socal-link {
+    display: flex;
+    gap: 5rem;
+}
+
+.link-item>li {
+    list-style: none;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.link-item>li>.arrow {
+    padding-top: 5px;
+}
+
+.link-item>li>a {
+    color: var(--main-textgreen-color);
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.link-item>li>.span-class {
+    color: var(--main-textgreen-color);
+    padding-left: 5px;
+}
+
+
+/* ====================tech container ==================== */
+
+
+.tech-container {
+    padding: 2rem;
+}
+
+.tech {
+    display: grid;
+    gap: 5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.tech-item {
+    width: 18vw;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.tech-item:hover {
+    background: rgba(80, 76, 76, 0.6);
+
+}
+
+.tech-item>h3 {
+    padding-left: 0.7rem;
+    font-size: 2.6rem;
+}
+
+.html {
+    color: rgb(232, 26, 26);
+    font-size: 6rem;
+}
+
+.css {
+    color: #2965f1;
+    font-size: 6rem;
+}
+
+.javaScript {
+    color: yellow;
+    font-size: 6rem;
+}
+
+.react {
+    color: #eb0756;
+    font-size: 6rem;
+}
+
+.dedux {
+    color: #5a3498;
+    font-size: 6rem;
+}
+
+.wordpress {
+    color: #21759b;
+    font-size: 6rem;
+}
+
+.git {
+    color: #f34f29;
+    font-size: 6rem;
+}
+
+.tailwindCss {
+    color: #3490dc;
+    font-size: 6rem;
+}
+
+
+
+/* ==============responsive About============== */
+
+
+
+
+@media (max-width:945px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container>.my-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container>.my-img>img {
+        width: 50%;
+    }
+
+    .tech {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .tech-item {
+        width: 24vw;
+    }
+
+
+}
+
+@media (max-width:715px) {
+    .tech {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .tech-item {
+        width: 35vw;
+    }
+
+
+}
+
+@media (max-width:640px) {
+    .container>.my-img>img {
+        width: 70%;
+    }
+
+    .socal-link {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-titel>p::after {
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+    .tech {
+        grid-template-columns: 1fr;
+
+    }
+
+    .container>.my-img>img {
+        width: 85%;
+    }
+
+    .tech-item {
+        width: 75vw;
+    }
+}
+
+@media (max-width:360px) {
+    .link-item>li {
+        font-size: 1.6rem;
+    }
+
+    .container>.my-img>img {
+        width: 90%;
+    }
+}
