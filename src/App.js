@@ -96,7 +96,7 @@ const App = () => {
           content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
         />
         <meta name="DC.format" content="text/html" />
-
+        <meta name="robots" content="noindex"/>
         {/* Structured Data (JSON-LD) */}
         <script type="application/ld+json">
           {JSON.stringify({
