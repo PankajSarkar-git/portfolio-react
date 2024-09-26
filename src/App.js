@@ -96,7 +96,30 @@ const App = () => {
           content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
         />
         <meta name="DC.format" content="text/html" />
-        <meta name="robots" content="noindex"/>
+        <meta name="robots" content="noindex" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content="Pankaj Sarkar - Web Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Discover the web development expertise of Pankaj Sarkar in React, JavaScript, and modern frontend frameworks."
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/126690794?v=4"
+        />
+        <meta
+          property="og:url"
+          content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+
+        <link
+          rel="canonical"
+          href="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
+        />
         {/* Structured Data (JSON-LD) */}
         <script type="application/ld+json">
           {JSON.stringify({
