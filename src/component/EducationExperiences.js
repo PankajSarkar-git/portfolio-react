@@ -19,6 +19,17 @@ const EducationExperiences = () => {
               </p>
             </div>
             <div className="container resume-container">
+              <h3 className="container-titel">Professional Experience</h3>
+              <div className="resume-item">
+                <h4>Software Engineer</h4>
+                <p>
+                  <em> AtticBits</em>
+                </p>
+                <h5>2024</h5>
+              </div>
+            </div>
+
+            <div className="container resume-container">
               <h3 className="container-titel">Education</h3>
               <div className="resume-item">
                 <h4>Front-end web development</h4>

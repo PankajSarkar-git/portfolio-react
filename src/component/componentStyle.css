@@ -11,6 +11,24 @@ body {
     color: #fff;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
 h1,
 h2,
 h3,
@@ -47,7 +65,8 @@ h4 {
     width: 100%;
     z-index: 899;
 }
-.nav-titel > h2 {
+
+.nav-titel>h2 {
     cursor: pointer;
 }
 
@@ -63,6 +82,14 @@ h4 {
 .navbar>.unOderList>.nav-links {
     list-style: none;
     cursor: pointer;
+
+}
+
+.navbar>.unOderList>.nav-links>a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+
 }
 
 .navbar>.unOderList>.nav-links {
@@ -137,6 +164,7 @@ h4 {
         font-size: 1.8rem;
         height: 7vh;
     }
+
     .navbar>.unOderList>.nav-links {
         font-size: 1.3rem;
     }
@@ -200,6 +228,3 @@ h4 {
     }
 
 }
-
-
-

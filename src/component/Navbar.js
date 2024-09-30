@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./componentStyle.css";
 import { Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
-const Navbar = ({ setShowComponent,showComponent }) => {
+const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const navLinks = document.querySelectorAll(".nav-links").forEach((e) => {
     e.addEventListener("click", () => {
@@ -14,7 +15,6 @@ const Navbar = ({ setShowComponent,showComponent }) => {
     setMobileNav(!mobileNav);
   };
 
-
   return (
     <>
       {/* ================navBar================ */}
@@ -25,16 +25,21 @@ const Navbar = ({ setShowComponent,showComponent }) => {
         </div>
         {/*============= nav Link=============  */}
         <ul className={mobileNav ? "unOderList activeNav " : "unOderList"}>
-          <li onClick={() => setShowComponent("home")} className={showComponent=== "home" ? "active nav-links " : "mav-a nav-links"}>Home
-          </li>
-          <li  onClick={() => setShowComponent("about")} className={showComponent=== "about" ? "active nav-links" : "mav-a nav-links"}>About Me
-          </li>
-          <li  onClick={() => setShowComponent("education")} className={showComponent=== "education" ? "active nav-links" : "mav-a nav-links"}>Education
-          </li>
-          <li  onClick={() => setShowComponent("project")} className={showComponent=== "project" ? "active nav-links" : "mav-a nav-links"}>Project
-          </li>
-          <li  onClick={() => setShowComponent("contact")} className={showComponent=== "contact" ? "active nav-links" : "mav-a nav-links"}>Contact
-          </li>
+          <NavLink to={"/"} className=" nav-links ">
+            Home
+          </NavLink>
+          <NavLink to={"/about"} className=" nav-links ">
+            About Me
+          </NavLink>
+          <NavLink to={"/education"} className=" nav-links ">
+            Education & Experience
+          </NavLink>
+          <NavLink to={"/project"} className=" nav-links ">
+            Project
+          </NavLink>
+          <NavLink to={"/contact"} className=" nav-links ">
+            Contact
+          </NavLink>
         </ul>
         {/* ==========Mobile menu========== */}
         <div className="mobile" onClick={toggleMenu}>
