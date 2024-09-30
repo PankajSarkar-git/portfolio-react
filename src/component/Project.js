@@ -3,7 +3,7 @@ import project from "../imgs/project.png";
 import project2 from "../imgs/project 2.png";
 import project3 from "../imgs/project 3.png";
 import project4 from "../imgs/project 4.png";
-import project5 from "../imgs/project5.png";
+import project5 from "../imgs/Project5.png";
 import project6 from "../imgs/project6.png";
 import { BsCode, BsGithub } from "react-icons/bs";
 import "./project.css";
