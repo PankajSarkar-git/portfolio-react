@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./componentStyle.css";
 import { Menu, X } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -14,13 +14,13 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMobileNav(!mobileNav);
   };
-
+  const navigate = useNavigate();
   return (
     <>
       {/* ================navBar================ */}
       <nav className="navbar top-nav">
         {/* ==================name================== */}
-        <div className="nav-titel" onClick={() => setShowComponent("home")}>
+        <div className="nav-titel" onClick={() => navigate("/")}>
           <h2>Pankaj Sarkar</h2>
         </div>
         {/*============= nav Link=============  */}

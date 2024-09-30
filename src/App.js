@@ -2,16 +2,15 @@ import Navbar from "./component/Navbar";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import qsane from "qsane";
 import { useEffect } from "react";
 
 const App = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    if (qsane.getLocation().pathname === "/") {
+  useEffect(() => {    
+    if (window.location.pathname === "/") {
       navigate("/");
     } else {
-      navigate(qsane.getLocation().pathname);
+      navigate(window.location.pathname);
     }
   }, []);
   return (
