@@ -6,7 +6,8 @@ import { useEffect } from "react";
 
 const App = () => {
   const navigate = useNavigate();
-  useEffect(() => {    
+  useEffect(() => {
+    console.log(window.location.pathname);
     if (window.location.pathname === "/") {
       navigate("/");
     } else {
