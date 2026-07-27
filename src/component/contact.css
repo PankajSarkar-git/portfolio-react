@@ -1,5 +1,5 @@
 /*============================= contact me ============================= */
-
+/* 
 .contact-container {
     margin: 3rem;
     grid-template-columns: repeat(2, auto);
@@ -35,10 +35,10 @@
 .contact-item>.contact-info>p {
     font-size: 1.6rem;
 
-}
+} */
 
 /* const form  */
-.contact-form {
+/* .contact-form {
     margin-top: 2rem;
     width: 80vw;
     display: flex;
@@ -77,19 +77,19 @@
     justify-content: center;
     gap: 2rem;
     margin: 1.2rem 0;
-}
+} */
 
-#form>.name-email>.inpit-container>input {
-    /* border-radius: 10px; */
+/* #form>.name-email>.inpit-container>input {
+
     padding: 0.6rem;
     font-size: 3rem;
     border: none;
     background-color: rgba(36, 33, 33, 0.6);
     color: var(--main-textgreen-color);
 
-}
+} */
 
-.sub-message {
+/* .sub-message {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -104,10 +104,10 @@ input::placeholder {
 textarea::placeholder {
     color: #06cd6d;
     opacity: 1;
-}
+} */
 
-.sub-message>.inpit-container>input {
-    /* border-radius: 10px; */
+/* .sub-message>.inpit-container>input {
+   
     padding: 0.6rem;
     font-size: 3rem;
     border: none;
@@ -117,7 +117,7 @@ textarea::placeholder {
 }
 
 .sub-message>.inpit-container>textarea {
-    /* border-radius: 10px; */
+   
     padding: 0.6rem;
     border: none;
     background-color: rgba(36, 33, 33, 0.6);
@@ -140,13 +140,11 @@ textarea::placeholder {
 #form>.button:hover {
     background-color: #06cd6d;
 
-}
-
-
+} */
 
 /* responsive */
 
-
+/* 
 
 @media (max-width:800px) {
     .contact-container {
@@ -177,9 +175,7 @@ textarea::placeholder {
         flex-direction: column;
     }
 
-    /* #form>.name-email>.inpit-container {
-        width: 100%;
-    } */
+
     form {
         width: 100%;
     }
@@ -190,7 +186,7 @@ textarea::placeholder {
     #form {
         justify-content: center;
         align-items: center;
-        /* width: 100%; */
+      
 
     }
 
@@ -267,4 +263,318 @@ textarea::placeholder {
     .sub-message {
         width: 90%;
     }
+} */
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact-section {
+  padding: 74px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-top: 20px;
+}
+
+.section-title h3 {
+  color: #4f46e5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #a8a8a8;
+  font-size: 16px;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.contact-wrapper {
+  padding: 0px 60px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 35px;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.contact-left,
+.contact-right {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 35px;
+}
+
+/* ===========================
+   CONTACT CARD
+=========================== */
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: 0.35s;
+}
+
+.contact-card:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: #4f46e5;
+  background: rgba(79, 70, 229, 0.12);
+}
+
+.icon-box {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #4f46e5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.icon-box svg {
+  font-size: 30px;
+  color: #fff;
+}
+
+.contact-card h4 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: #bcbcbc;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   SOCIAL
+=========================== */
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #4f46e5;
+  transform: translateY(-4px) rotate(8deg);
+}
+
+.social-links svg {
+  font-size: 20px;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.contact-right h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #ddd;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  font-size: 15px;
+  resize: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #8d8d8d;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.submit-btn {
+  width: 220px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+
+  background: #4f46e5;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.submit-btn:hover {
+  background: #635bff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.35);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 991px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 25px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .contact-right h3 {
+    font-size: 24px;
+  }
+
+  .icon-box {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon-box svg {
+    font-size: 24px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-left,
+  .contact-right {
+    padding: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
 }
