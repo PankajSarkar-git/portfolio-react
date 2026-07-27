@@ -7,6 +7,9 @@
     "build": "parcel build public/index.html",
     "test": "test"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "author": "Pankaj Sarkar",
   "license": "ISC",
   "devDependencies": {
