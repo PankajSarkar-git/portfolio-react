@@ -1,153 +1,129 @@
-import Navbar from "./component/Navbar";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+
+import Navbar from "./component/Navbar";
+
+const WEBSITE_URL = "https://pankaj-sarkar.vercel.app";
+const PROFILE_IMAGE =
+  "https://avatars.githubusercontent.com/u/126690794?v=4";
 
 const App = () => {
-  const navigate = useNavigate();
   useEffect(() => {
-    console.log(window.location.pathname);
-    if (window.location.pathname === "/") {
-      navigate("/");
-    } else {
-      navigate(window.location.pathname);
-    }
+    window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="main">
       <Helmet>
-        {/* Page Title - Include your name and profession */}
-        <title>Pankaj Sarkar | Web Developer | React & JavaScript Expert</title>
+        {/* Primary SEO */}
+        <title>
+          Pankaj Sarkar | React Developer | Frontend Developer Portfolio
+        </title>
 
-        {/* Meta Description - Unique and concise */}
+        <meta charSet="utf-8" />
+
         <meta
           name="description"
-          content="Pankaj Sarkar is a professional web developer specializing in React, JavaScript, and frontend development. View projects and services."
+          content="Pankaj Sarkar is a React and React Native Developer with 2+ years of experience building modern web and mobile applications using React, JavaScript, TypeScript, Redux, Next.js, Node.js, and MongoDB."
         />
 
-        {/* Meta Keywords - Relevant to your profession and skills */}
-        <meta
-          name="keywords"
-          content="Pankaj Sarkar, Web Developer, React, JavaScript, Frontend Developer, JavaScript Expert, React Developer"
-        />
-
-        {/* Canonical URL */}
-        <link
-          rel="canonical"
-          href="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
-        />
-
-        {/* Robots Tag - Ensures the site is indexed and followed */}
-        <meta name="robots" content="index, follow" />
-
-        {/* Open Graph Meta Tags for Social Media */}
-        <meta
-          property="og:title"
-          content="Pankaj Sarkar - Web Developer Portfolio"
-        />
-        <meta
-          property="og:description"
-          content="Discover the web development expertise of Pankaj Sarkar in React, JavaScript, and modern frontend frameworks."
-        />
-        <meta
-          property="og:image"
-          content="https://avatars.githubusercontent.com/u/126690794?v=4"
-        />
-        <meta
-          property="og:url"
-          content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags for Sharing */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Pankaj Sarkar - Web Developer | React & JavaScript"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore web development projects and skills by Pankaj Sarkar, specializing in React and frontend technologies."
-        />
-        <meta
-          name="twitter:image"
-          content="https://avatars.githubusercontent.com/u/126690794?v=4"
-        />
-
-        {/* Mobile Optimization */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="mobile-web-app-capable" content="yes" />
-
-        {/* Author Tag - Helps identify the creator */}
         <meta name="author" content="Pankaj Sarkar" />
 
-        {/* Theme Color for Mobile Browsers */}
-        <meta name="theme-color" content="#317EFB" />
-
-        {/* Dublin Core Meta Tags for Academic and Governmental Sites (Optional, but adds credibility) */}
-        <meta name="DC.title" content="Pankaj Sarkar - Web Developer" />
-        <meta name="DC.creator" content="Pankaj Sarkar" />
-        <meta name="DC.subject" content="React, JavaScript, Web Development" />
-        <meta
-          name="DC.description"
-          content="Pankaj Sarkar's web development portfolio. Explore projects built using React and modern web technologies."
-        />
-        <meta
-          name="DC.publisher"
-          content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
-        />
-        <meta name="DC.format" content="text/html" />
-        
         <meta name="robots" content="index, follow" />
+
+        <meta
+          name="googlebot"
+          content="index, follow, max-image-preview:large"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="theme-color" content="#4f46e5" />
+
+        {/* Canonical */}
+        <link rel="canonical" href={WEBSITE_URL} />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph */}
         <meta
           property="og:title"
-          content="Pankaj Sarkar - Web Developer Portfolio"
+          content="Pankaj Sarkar | React Developer Portfolio"
         />
+
         <meta
           property="og:description"
-          content="Discover the web development expertise of Pankaj Sarkar in React, JavaScript, and modern frontend frameworks."
+          content="Explore the portfolio of Pankaj Sarkar. React & React Native Developer specializing in modern web and mobile applications."
         />
-        <meta
-          property="og:image"
-          content="https://avatars.githubusercontent.com/u/126690794?v=4"
-        />
-        <meta
-          property="og:url"
-          content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
-        />
+
         <meta property="og:type" content="website" />
 
-        <link
-          rel="canonical"
-          href="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
+        <meta property="og:url" content={WEBSITE_URL} />
+
+        <meta property="og:image" content={PROFILE_IMAGE} />
+
+        <meta property="og:site_name" content="Pankaj Sarkar Portfolio" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Pankaj Sarkar | React Developer"
         />
-        {/* Structured Data (JSON-LD) */}
+
+        <meta
+          name="twitter:description"
+          content="React & React Native Developer Portfolio showcasing projects, skills and experience."
+        />
+
+        <meta name="twitter:image" content={PROFILE_IMAGE} />
+
+        {/* JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://pankaj-sarkar-pankajsarkar-git.vercel.app/",
+            "@context": "https://schema.org",
             "@type": "Person",
             name: "Pankaj Sarkar",
-            jobTitle: "Web Developer",
-            url: "https://pankaj-sarkar-pankajsarkar-git.vercel.app/",
-            sameAs: [
-              "https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/",
-              "https://github.com/PankajSarkar-git",
-            ],
+            url: WEBSITE_URL,
+            image: PROFILE_IMAGE,
+            jobTitle: "React Developer",
             description:
-              "Pankaj Sarkar specializes in web development using React, JavaScript, and modern frontend technologies.",
+              "React and React Native Developer with experience building modern web and mobile applications.",
+
+            sameAs: [
+              "https://github.com/PankajSarkar-git",
+              "https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/",
+            ],
+
+            knowsAbout: [
+              "React",
+              "React Native",
+              "JavaScript",
+              "TypeScript",
+              "Redux",
+              "Next.js",
+              "Node.js",
+              "MongoDB",
+              "Express.js",
+              "HTML",
+              "CSS",
+              "SCSS",
+            ],
+
             worksFor: {
               "@type": "Organization",
               name: "Freelance",
             },
-            image: "https://avatars.githubusercontent.com/u/126690794?v=4",
           })}
         </script>
       </Helmet>
+
       <Navbar />
-      <div className="">
-        <Outlet />
-      </div>
+
+      <Outlet />
     </div>
   );
 };
