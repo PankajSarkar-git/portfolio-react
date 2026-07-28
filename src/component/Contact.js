@@ -150,32 +150,20 @@
 
 // export default Contact;
 
-
-
 import React from "react";
-import {
-  MdEmail,
-  MdLocationOn,
-  MdPhone,
-  MdShare,
-} from "react-icons/md";
+import { MdEmail, MdLocationOn, MdPhone, MdShare } from "react-icons/md";
 
-import {
-  BsLinkedin,
-  BsGithub,
-  BsFacebook,
-} from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 
 import { AiFillInstagram } from "react-icons/ai";
 
-import "./contact.css";
+import styles from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className="contact-section">
+    <section className={styles.contactSection}>
       <div className="main-container">
-
-        <div className="section-title">
+        <div className={styles.sectionTitle}>
           <h3>Contact</h3>
           <h2>Let's Work Together</h2>
           <p>
@@ -184,15 +172,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="contact-wrapper">
-
+        <div className={styles.contactWrapper}>
           {/* Left Side */}
-
-          <div className="contact-left">
-
-            <div className="contact-card">
-
-              <div className="icon-box">
+          <div className={styles.contactLeft}>
+            <div className={styles.contactCard}>
+              <div className={styles.iconBox}>
                 <MdLocationOn />
               </div>
 
@@ -200,12 +184,10 @@ const Contact = () => {
                 <h4>Address</h4>
                 <p>Shlibari Hat, Alipurduar, West Bengal</p>
               </div>
-
             </div>
 
-            <div className="contact-card">
-
-              <div className="icon-box">
+            <div className={styles.contactCard}>
+              <div className={styles.iconBox}>
                 <MdEmail />
               </div>
 
@@ -213,12 +195,10 @@ const Contact = () => {
                 <h4>Email</h4>
                 <p>pankajsarkar527@gmail.com</p>
               </div>
-
             </div>
 
-            <div className="contact-card">
-
-              <div className="icon-box">
+            <div className={styles.contactCard}>
+              <div className={styles.iconBox}>
                 <MdPhone />
               </div>
 
@@ -226,21 +206,17 @@ const Contact = () => {
                 <h4>Phone</h4>
                 <p>+91 8250751984</p>
               </div>
-
             </div>
 
-            <div className="contact-card">
-
-              <div className="icon-box">
+            <div className={styles.contactCard}>
+              <div className={styles.iconBox}>
                 <MdShare />
               </div>
 
               <div>
-
                 <h4>Social Profiles</h4>
 
-                <div className="social-links">
-
+                <div className={styles.socialLinks}>
                   <a
                     href="https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/"
                     target="_blank"
@@ -272,93 +248,68 @@ const Contact = () => {
                   >
                     <BsFacebook />
                   </a>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
 
           {/* Right Side */}
-
-          <div className="contact-right">
-
+          <div className={styles.contactRight}>
             <h3>Send a Message</h3>
 
             <form
               action="https://formspree.io/f/xqkvperj"
               method="POST"
-              className="contact-form"
+              className={styles.contactForm}
             >
-
-              <div className="input-grid">
-
-                <div className="input-group">
-
+              <div className={styles.inputGrid}>
+                <div className={styles.inputGroup}>
                   <label>Name</label>
-
                   <input
                     type="text"
                     name="UserName"
                     placeholder="Enter your name"
                     required
                   />
-
                 </div>
 
-                <div className="input-group">
-
+                <div className={styles.inputGroup}>
                   <label>Email</label>
-
                   <input
                     type="email"
                     name="Email"
                     placeholder="Enter your email"
                     required
                   />
-
                 </div>
-
               </div>
 
-              <div className="input-group">
-
+              <div className={styles.inputGroup}>
                 <label>Subject</label>
-
                 <input
                   type="text"
                   name="Subject"
                   placeholder="Subject"
                   required
                 />
-
               </div>
 
-              <div className="input-group">
-
+              <div className={styles.inputGroup}>
                 <label>Message</label>
-
                 <textarea
                   rows="6"
                   name="message"
                   placeholder="Write your message..."
                   required
-                ></textarea>
-
+                />
               </div>
 
-              <button className="submit-btn" type="submit">
+              <button type="submit" className={styles.submitBtn}>
                 Send Message
               </button>
-
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

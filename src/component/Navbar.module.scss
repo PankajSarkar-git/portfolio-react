@@ -1,0 +1,368 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  transition: all 0.35s ease;
+}
+
+.show {
+  transform: translateY(0);
+}
+
+.hide {
+  transform: translateY(-120%);
+}
+
+.scrolled {
+  background: rgba(10, 10, 20, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+}
+
+.container {
+  max-width: 1380px;
+
+  margin: auto;
+
+  padding: 22px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ======================================
+                LOGO
+====================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  color: white;
+
+  letter-spacing: 1px;
+
+  transition: .35s;
+
+  span {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 12px;
+
+    border-radius: 14px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: #4f46e5;
+  }
+}
+
+/* ======================================
+          DESKTOP NAVIGATION
+====================================== */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navLink {
+  position: relative;
+
+  color: #d4d4d8;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: .3s ease;
+
+  &:hover {
+    color: white;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #4f46e5;
+
+    transition: .3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.activeLink {
+  color: white;
+
+  &::after {
+    width: 100%;
+  }
+}
+
+/* ======================================
+            RESUME BUTTON
+====================================== */
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+
+  padding: 12px 22px;
+
+  border-radius: 12px;
+
+  background: #4f46e5;
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: .35s ease;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(79, 70, 229, .35);
+  }
+}
+
+/* ======================================
+        MOBILE MENU BUTTON
+====================================== */
+
+.menuButton {
+  width: 48px;
+  height: 48px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  backdrop-filter: blur(20px);
+
+  transition: all .35s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background: #4f46e5;
+    transform: scale(1.05);
+  }
+}
+
+/* ======================================
+            MOBILE OVERLAY
+====================================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(4px);
+
+  z-index: 998;
+}
+
+/* ======================================
+          RESPONSIVE TABLET
+====================================== */
+
+@media (max-width: 992px) {
+
+  .container {
+    padding: 18px 20px;
+  }
+
+  .menuButton {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 40px;
+
+    background: rgba(15, 15, 25, 0.96);
+
+    backdrop-filter: blur(30px);
+
+    border-left: 1px solid rgba(255, 255, 255, .08);
+
+    transition: right .35s ease;
+
+    z-index: 1000;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .navLink {
+    font-size: 1.15rem;
+    width: 100%;
+
+    &::after {
+      bottom: -6px;
+    }
+  }
+
+  .resumeBtn {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ======================================
+            MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+
+    span {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 35px 30px;
+  }
+
+  .navLink {
+    font-size: 1.1rem;
+  }
+
+  .resumeBtn {
+    padding: 14px 20px;
+  }
+}
+
+/* ======================================
+          SMALL MOBILE
+====================================== */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+
+    span {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+  }
+
+  .menuButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav {
+    padding: 30px 24px;
+    gap: 24px;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
+
+  .resumeBtn {
+    width: 100%;
+    padding: 14px;
+    font-size: .95rem;
+  }
+}

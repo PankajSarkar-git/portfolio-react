@@ -1,170 +1,289 @@
 import React from "react";
-// import { IoIosArrowForward } from 'react-icons/fa';
-// import myimg from "../img/myimg"
-// import myimg from "../homeimgs/img1.jpg";
-import { Sparkle } from "lucide-react";
-// import {BiLogoReact} from "react-icons/fa"
 import {
-  BiLogoCss3,
-  BiLogoGit,
-  BiLogoHtml5,
-  BiLogoJavascript,
+  MapPin,
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  Instagram,
+  Download,
+} from "lucide-react";
+
+import {
   BiLogoReact,
+  BiLogoJavascript,
+  BiLogoTypescript,
+  BiLogoHtml5,
+  BiLogoCss3,
   BiLogoRedux,
+  BiLogoGit,
+  BiLogoGithub,
   BiLogoTailwindCss,
-  BiLogoWordpress,
+  BiLogoNodejs,
+  BiLogoMongodb,
 } from "react-icons/bi";
-import "./about.css";
+
+import {
+  SiNextdotjs,
+  SiExpress,
+  SiFigma,
+  SiFirebase,
+} from "react-icons/si";
+
+import styles from "./About.module.scss";
+
+const techStack = [
+  {
+    name: "React.js",
+    icon: <BiLogoReact />,
+    className: styles.react,
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    className: styles.next,
+  },
+  {
+    name: "React Native",
+    icon: <BiLogoReact />,
+    className: styles.react,
+  },
+  {
+    name: "JavaScript",
+    icon: <BiLogoJavascript />,
+    className: styles.js,
+  },
+  {
+    name: "TypeScript",
+    icon: <BiLogoTypescript />,
+    className: styles.ts,
+  },
+  {
+    name: "HTML5",
+    icon: <BiLogoHtml5 />,
+    className: styles.html,
+  },
+  {
+    name: "CSS3",
+    icon: <BiLogoCss3 />,
+    className: styles.css,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <BiLogoTailwindCss />,
+    className: styles.tailwind,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: <BiLogoRedux />,
+    className: styles.redux,
+  },
+  {
+    name: "Node.js",
+    icon: <BiLogoNodejs />,
+    className: styles.node,
+  },
+  {
+    name: "Express.js",
+    icon: <SiExpress />,
+    className: styles.express,
+  },
+  {
+    name: "MongoDB",
+    icon: <BiLogoMongodb />,
+    className: styles.mongodb,
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase />,
+    className: styles.firebase,
+  },
+  {
+    name: "Git",
+    icon: <BiLogoGit />,
+    className: styles.git,
+  },
+  {
+    name: "GitHub",
+    icon: <BiLogoGithub />,
+    className: styles.github,
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma />,
+    className: styles.figma,
+  },
+];
+
 const About = () => {
   return (
-    <div>
-      <section className="section about-section sectionActive">
-        {/* ===================== About me  ===================== */}
-        <div className="main-container">
-          <div className="section-container">
-            <div className="section-titel">
-              <h3>About</h3>
-              <p>Learn more about me</p>
-            </div>
-            <div className="container container-About">
-              <div className="my-img">
-                <img
-                  src="https://avatars.githubusercontent.com/u/126690794?v=4"
-                  alt="Pankaj Sarkar"
-                  className=""
-                />
-              </div>
-              <div className="info-container">
-                <div className="info">
-                  <h2>Front-end web-developer</h2>
-                  <p>
-                    Writing code to build proper functional web apps is my
-                    passion. I have a strong background in web development and
-                    have worked on various projects, which I've mentioned in my
-                    resume here . I am a self-motivated and self-driven
-                    individual and, I promise to take it all up with utmost
-                    responsibility whenever my cup is filled with new
-                    opportunities and challenges. I have always been curious to
-                    learn about new kinds of technologies since my childhood and
-                    realized that this is what I feel most enthusiastic about.
-                  </p>
-                </div>
-                <div className="socal-link">
-                  <div className="left-side-ul">
-                    <ul className="link-item">
-                      <li>
-                        <Sparkle color="green" className="arrow" />
-                        Linkedin :
-                        <a
-                          href="https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/"
-                          target="_blank"
-                        >
-                          Pankaj Sarkar
-                        </a>
-                      </li>
-                      <li>
-                        <Sparkle color="green" className="arrow" /> Github :
-                        <a
-                          href="https://github.com/PankajSarkar-git"
-                          target="_blank"
-                        >
-                          PankajSarkar-git
-                        </a>
-                      </li>
-                      <li>
-                        <Sparkle color="green" className="arrow" /> Phone :
-                        <span className="span-class">8250751984</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="right-side-ul">
-                    <ul className="link-item">
-                      <li>
-                        <Sparkle color="green" className="arrow" />
-                        Instagram :
-                        <a
-                          href="https://www.instagram.com/below_average_boy_/"
-                          target="_blank"
-                        >
-                          Pankaj Sarkar
-                        </a>
-                      </li>
-                      <li>
-                        <Sparkle color="green" className="arrow" /> Email :
-                        <span className="span-class">
-                          pankajsarkar527@gmail.com
-                        </span>
-                      </li>
-                      <li>
-                        <Sparkle color="green" className="arrow" /> City :
-                        <span className="span-class">
-                          Alipurduar, West Bangal
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    <section className={styles.aboutSection} id="about">
+      <div className={styles.wrapper}>
+        {/* Section Title */}
+
+        <div className={styles.sectionTitle}>
+          <span>About Me</span>
+
+          <h2>
+            Crafting Modern Web &
+            <br />
+            Mobile Experiences
+          </h2>
+
+          <p>
+            I specialize in building modern, scalable, responsive, and
+            high-performance web and mobile applications using React.js,
+            Next.js, React Native, TypeScript, and the latest frontend
+            technologies.
+          </p>
+        </div>
+
+        {/* About */}
+
+        <div className={styles.aboutContent}>
+          {/* Left Image */}
+
+          <div className={styles.imageSection}>
+            <div className={styles.imageWrapper}>
+              <img
+                src="https://avatars.githubusercontent.com/u/126690794?v=4"
+                alt="Pankaj Sarkar"
+              />
             </div>
           </div>
 
-          {/* </section>
-      <section className="section sectionActive"> */}
-          <div className="tech-container">
-            <div className="section-titel">
-              <h3>Tech-Stack I use</h3>
+          {/* Right Content */}
+
+          <div className={styles.content}>
+            <h3>Frontend & React Native Developer</h3>
+
+            <p>
+              Hi, I'm <strong>Pankaj Sarkar</strong>, a passionate Frontend
+              Developer with over <strong>2 years of professional
+              experience</strong> building responsive websites and mobile
+              applications.
+
+              <br />
+              <br />
+
+              I enjoy transforming UI/UX designs into beautiful,
+              pixel-perfect interfaces while writing clean, maintainable,
+              and scalable code.
+
+              <br />
+              <br />
+
+              My expertise includes React.js, Next.js, React Native,
+              TypeScript, Redux Toolkit, Tailwind CSS, REST APIs, and
+              modern frontend architecture. I'm always eager to learn new
+              technologies and solve real-world problems through software
+              development.
+            </p>
+
+            {/* Information */}
+
+            <div className={styles.infoGrid}>
+              <div className={styles.infoCard}>
+                <Phone size={22} />
+
+                <div>
+                  <h4>Phone</h4>
+                  <p>+91 8250751984</p>
+                </div>
+              </div>
+
+              <div className={styles.infoCard}>
+                <Mail size={22} />
+
+                <div>
+                  <h4>Email</h4>
+                  <p>pankajsarkar527@gmail.com</p>
+                </div>
+              </div>
+
+              <div className={styles.infoCard}>
+                <MapPin size={22} />
+
+                <div>
+                  <h4>Location</h4>
+                  <p>Alipurduar, West Bengal, India</p>
+                </div>
+              </div>
             </div>
-            <div className="tech">
-              <div className="tech-item">
-                <BiLogoReact className="react" /> <h3>React JS</h3>
-              </div>
-              <div className="tech-item">
-                <BiLogoJavascript className="javaScript" /> <h3>JavaScript</h3>
-              </div>
-              <div className="tech-item">
-                <BiLogoHtml5 className="html" /> <h3>HTML5</h3>
-              </div>
-              <div className="tech-item">
-                <BiLogoCss3 className="css" /> <h3>CSS3</h3>
-              </div>
+
+            {/* Social Links */}
+
+            <div className={styles.socialLinks}>
+              <a
+                href="https://github.com/PankajSarkar-git"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/pankaj-sarkar-a6a28624a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin />
+              </a>
+
+              <a
+                href="https://www.instagram.com/ordinary_boy_010/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Instagram />
+              </a>
             </div>
-            <div className="skills ech-container">
-              <div className="section-titel">
-                <h3>Skills</h3>
-              </div>
-              <div className="tech">
-                <div className="tech-item">
-                  <BiLogoHtml5 className="html" /> <h3>HTML5</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoCss3 className="css" /> <h3>CSS3</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoJavascript className="javaScript" />{" "}
-                  <h3>JavaScript</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoReact className="react" /> <h3>React JS</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoRedux className="dedux" /> <h3>Redux</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoWordpress className="wordpress" /> <h3>wordpress</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoGit className="git" /> <h3>Git</h3>
-                </div>
-                <div className="tech-item">
-                  <BiLogoTailwindCss className="tailwindCss" />
-                  <h3>TailwindCss</h3>
-                </div>
-              </div>
+
+            {/* Resume Button */}
+
+            <div className={styles.actionButtons}>
+              <a
+              href="https://drive.google.com/file/d/1-2nO_HFDJloUbB5dxOSniH23V5SQayOr/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+                className={styles.resumeBtn}
+              >
+                <Download size={20} />
+                Download Resume
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+
+        {/* Tech Stack */}
+
+        <div className={styles.techSection}>
+          <div className={styles.sectionTitleSmall}>
+            <span>Skills & Technologies</span>
+
+            <h2>Tech Stack</h2>
+
+            <p>
+              Technologies and tools I use to build modern, scalable,
+              responsive, and high-performance applications.
+            </p>
+          </div>
+
+          <div className={styles.techGrid}>
+            {techStack.map((tech) => (
+              <div className={styles.techCard} key={tech.name}>
+                <div className={tech.className}>{tech.icon}</div>
+
+                <h3>{tech.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

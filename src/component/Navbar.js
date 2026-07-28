@@ -1,52 +1,128 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X, Download } from "lucide-react";
 import "./componentStyle.css";
-import { Menu, X } from "lucide-react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
-  const [mobileNav, setMobileNav] = useState(false);
-  const navLinks = document.querySelectorAll(".nav-links").forEach((e) => {
-    e.addEventListener("click", () => {
-      setMobileNav(false);
-    });
-  });
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
-  const toggleMenu = () => {
-    setMobileNav(!mobileNav);
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    let lastScroll = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      setScrolled(currentScroll > 40);
+
+      if (currentScroll > lastScroll && currentScroll > 120) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
-  const navigate = useNavigate();
+
+  const navItems = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Experience",
+      path: "/education",
+    },
+    {
+      name: "Projects",
+      path: "/project",
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
+
   return (
-    <>
-      {/* ================navBar================ */}
-      <nav className="navbar top-nav">
-        {/* ==================name================== */}
-        <div className="nav-titel" onClick={() => navigate("/")}>
-          <h2>Pankaj Sarkar</h2>
-        </div>
-        {/*============= nav Link=============  */}
-        <ul className={mobileNav ? "unOderList activeNav " : "unOderList"}>
-          <NavLink to={"/"} className=" nav-links ">
-            Home
-          </NavLink>
-          <NavLink to={"/about"} className=" nav-links ">
-            About Me
-          </NavLink>
-          <NavLink to={"/education"} className=" nav-links ">
-            Education & Experience
-          </NavLink>
-          <NavLink to={"/project"} className=" nav-links ">
-            Project
-          </NavLink>
-          <NavLink to={"/contact"} className=" nav-links ">
-            Contact
-          </NavLink>
-        </ul>
-        {/* ==========Mobile menu========== */}
-        <div className="mobile" onClick={toggleMenu}>
-          {mobileNav ? <X color="white" /> : <Menu color="white" />}
-        </div>
-      </nav>
-    </>
+    <header
+      className={`
+        ${styles.header}
+        ${scrolled ? styles.scrolled : ""}
+        ${showNavbar ? styles.show : styles.hide}
+      `}
+    >
+      <div className={styles.container}>
+        {/* Logo */}
+
+        <NavLink to="/" className={styles.logo} onClick={closeMenu}>
+          <span>P</span>ankaj
+        </NavLink>
+
+        {/* Desktop Navigation */}
+
+        <nav className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.activeLink : ""}`
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
+
+          <a
+            href="https://drive.google.com/file/d/1-2nO_HFDJloUbB5dxOSniH23V5SQayOr/view?usp=sharing"
+            className={styles.resumeBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Download size={18} />
+            Resume
+          </a>
+        </nav>
+
+        {/* Mobile Menu Button */}
+
+        <button
+          className={styles.menuButton}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Overlay */}
+
+      {menuOpen && <div className={styles.overlay} onClick={closeMenu} />}
+    </header>
   );
 };
 
