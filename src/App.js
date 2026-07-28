@@ -98,7 +98,7 @@ const App = () => {
           content="https://pankaj-sarkar-pankajsarkar-git.vercel.app/"
         />
         <meta name="DC.format" content="text/html" />
-        <meta name="robots" content="noindex" />
+        
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
