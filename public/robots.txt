@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://pankaj-sarkar.vercel.app/sitemap.xml
