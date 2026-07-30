@@ -5,8 +5,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "./component/Navbar";
 
 const WEBSITE_URL = "https://pankaj-sarkar.vercel.app";
-const PROFILE_IMAGE =
-  "https://avatars.githubusercontent.com/u/126690794?v=4";
+const PROFILE_IMAGE = "https://avatars.githubusercontent.com/u/126690794?v=4";
 
 const App = () => {
   useEffect(() => {
@@ -18,14 +17,15 @@ const App = () => {
       <Helmet>
         {/* Primary SEO */}
         <title>
-          Pankaj Sarkar | React Developer | Frontend Developer Portfolio
+          Pankaj Sarkar | Software Engineer | Full Stack Developer | React,
+          Next.js, React Native
         </title>
 
         <meta charSet="utf-8" />
 
         <meta
           name="description"
-          content="Pankaj Sarkar is a React and React Native Developer with 2+ years of experience building modern web and mobile applications using React, JavaScript, TypeScript, Redux, Next.js, Node.js, and MongoDB."
+          content="Pankaj Sarkar is a Software Engineer with 2+ years of experience building scalable web and mobile applications using React, Next.js, React Native, Node.js, Express.js, MongoDB, JavaScript and TypeScript. Available for Full Stack, Frontend and Mobile Developer roles."
         />
 
         <meta name="author" content="Pankaj Sarkar" />
@@ -45,7 +45,20 @@ const App = () => {
         <link rel="canonical" href={WEBSITE_URL} />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
 
         {/* Open Graph */}
         <meta
@@ -69,10 +82,7 @@ const App = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta
-          name="twitter:title"
-          content="Pankaj Sarkar | React Developer"
-        />
+        <meta name="twitter:title" content="Pankaj Sarkar | React Developer" />
 
         <meta
           name="twitter:description"
@@ -89,7 +99,7 @@ const App = () => {
             name: "Pankaj Sarkar",
             url: WEBSITE_URL,
             image: PROFILE_IMAGE,
-            jobTitle: "React Developer",
+            jobTitle: "Software Engineer",
             description:
               "React and React Native Developer with experience building modern web and mobile applications.",
 
@@ -99,18 +109,26 @@ const App = () => {
             ],
 
             knowsAbout: [
+              "Software Engineering",
+              "Frontend Development",
+              "Backend Development",
+              "Full Stack Development",
+              "Mobile App Development",
               "React",
               "React Native",
+              "Next.js",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
               "JavaScript",
               "TypeScript",
               "Redux",
-              "Next.js",
-              "Node.js",
-              "MongoDB",
-              "Express.js",
               "HTML",
               "CSS",
               "SCSS",
+              "REST APIs",
+              "Git",
+              "Firebase",
             ],
 
             worksFor: {
